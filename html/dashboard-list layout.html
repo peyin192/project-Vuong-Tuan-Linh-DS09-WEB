@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="../css/dashboard-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" alt="Trello" class="logo"></h2>
+            <ul>
+                <li><b>YOUR DASHBOARD</b></li>
+                <li><a href="dashboard-list layout.html"><i class="fa-solid fa-table-columns"></i> User dashboard</a></li>
+                <li><a href="add.html"><i class="fa-solid fa-user-plus"></i> Add new user</a></li>
+                <hr><br>
+                <li><a href="signin.html"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2><i class="fa-solid fa-list"></i> User Management</h2>
+            <hr>
+            <br>
+
+            <!-- Search -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search user by name">
+                <button onclick="searchUser()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>User code</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Birthday</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination"></div>
+        </main>
+    </div>
+
+    <script src="../js/dashboard-list.js"></script>
+</body>
+
+</html>
